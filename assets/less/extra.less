@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('../fonts/Raleway/Raleway-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'ralewayB';
+    src: url('../fonts/Raleway/Raleway-Bold.ttf');
+}
+
+@font-face {
+    font-family: @tahoma;
+    src: url('../fonts/tahoma/TahomaRegular');
+}
+
+body {
+    font-family: @tahoma;
+    background-color: @bodyColor;
+}
+
+::selection {
+    background-color: #42324e;
+    color: #fff;
+}
+
+.marg {
+    margin: 0px !important;
+}
+
+.marg-top {
+    margin-top: 10px;
+}
+
+.marg-top-8 {
+    margin-top: 9px;
+}
+
+.marg-20 {
+    margin-top: 20px !important;
+}
+
+.pad {
+    padding: 0px !Important;
+}
+
+.mt-20 {
+    margin-top: 23px;
+}
+
+a {
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+button {
+    outline: none !important;
+}
+
+.no-border {
+    border: 0px !important;
+}
+
+.heading-all {
+    text-align: center;
+    margin-bottom: 60px;
+
+    h3 {
+        font-size: 36px;
+        font-weight: bold;
+        position: relative;
+        text-transform: uppercase;
+        margin: 0px;
+        margin-top: 5px;
+        display: inline-block;
+
+        &:before {
+            content: "";
+            position: absolute;
+            padding: 2px;
+            left: 25%;
+            right: 25%;
+            background-color: #f64827;
+            bottom: -7px;
+        }
+    }
+
+    img {
+        width: 23px;
+        display: none;
+    }
+}
+
+.showWrap{
+    display: block !important;
+}
+
+.slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    background: transparent;
+    outline: none;
+    opacity: 2;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 25px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 25px;
+    background: @themeGreen;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 30px;
+    height: 25px;
+    background: @themeGreen;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+  }

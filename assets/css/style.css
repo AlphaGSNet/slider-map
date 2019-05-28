@@ -1,0 +1,787 @@
+@font-face {
+  font-family: 'lato';
+  src: url('../fonts/Lato/Lato-Regular.ttf');
+}
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'raleway';
+  src: url('../fonts/Raleway/Raleway-Regular.ttf');
+}
+@font-face {
+  font-family: 'ralewayB';
+  src: url('../fonts/Raleway/Raleway-Bold.ttf');
+}
+@font-face {
+  font-family: 'tahoma';
+  src: url('../fonts/tahoma/TahomaRegular');
+}
+body {
+  font-family: 'tahoma';
+  background-color: #f3f6f9;
+}
+::selection {
+  background-color: #42324e;
+  color: #fff;
+}
+.marg {
+  margin: 0px !important;
+}
+.marg-top {
+  margin-top: 10px;
+}
+.marg-top-8 {
+  margin-top: 9px;
+}
+.marg-20 {
+  margin-top: 20px !important;
+}
+.pad {
+  padding: 0px !Important;
+}
+.mt-20 {
+  margin-top: 23px;
+}
+a {
+  text-decoration: none !important;
+  outline: none !important;
+}
+button {
+  outline: none !important;
+}
+.no-border {
+  border: 0px !important;
+}
+.heading-all {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.heading-all h3 {
+  font-size: 36px;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+  margin: 0px;
+  margin-top: 5px;
+  display: inline-block;
+}
+.heading-all h3:before {
+  content: "";
+  position: absolute;
+  padding: 2px;
+  left: 25%;
+  right: 25%;
+  background-color: #f64827;
+  bottom: -7px;
+}
+.heading-all img {
+  width: 23px;
+  display: none;
+}
+.showWrap {
+  display: block !important;
+}
+.slidecontainer {
+  width: 100%;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  background: transparent;
+  outline: none;
+  opacity: 2;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 25px;
+  position: relative;
+  z-index: 2;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 25px;
+  background: #62bf64;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+.slider::-moz-range-thumb {
+  width: 30px;
+  height: 25px;
+  background: #62bf64;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+.all-sideWrap {
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 25px;
+}
+.all-sideWrap .btnMain {
+  text-align: center;
+}
+.all-sideWrap .btnMain .btn {
+  background-color: #62bf64;
+  color: #fff;
+  box-shadow: 0 0 0 0;
+  border: 0px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  padding: 8px 50px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+.all-sideWrap .tableMain {
+  position: relative;
+}
+.all-sideWrap .tableMain table {
+  border: 0px;
+}
+.all-sideWrap .tableMain table td {
+  font-size: 12px;
+}
+.all-sideWrap .tableMain table * {
+  border: 0px;
+}
+.all-sideWrap .borderRight {
+  border-right: 1px solid #f5f5f5;
+}
+.all-sideWrap .lastPera {
+  position: relative;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.all-sideWrap .lastPera span {
+  font-size: 12px;
+  position: absolute;
+  right: 0px;
+  top: 2px;
+  font-weight: lighter;
+}
+.all-sideWrap .infoLeft {
+  position: relative;
+}
+.all-sideWrap .infoLeft .topHeading {
+  position: relative;
+}
+.all-sideWrap .infoLeft .topHeading h4 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.all-sideWrap .infoLeft .topHeading P {
+  position: relative;
+  padding-right: 140px;
+  color: #323c47;
+  font-size: 12px;
+}
+.all-sideWrap .infoLeft .topHeading P .smallNumber {
+  position: absolute;
+  right: 100px;
+  top: 0px;
+}
+.all-sideWrap .infoLeft .topHeading P .percent {
+  position: absolute;
+  right: 0px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.all-sideWrap .infoLeft .topHeading P .percent i {
+  font-size: 22px;
+  position: relative;
+  top: 1px;
+}
+.all-sideWrap .infoLeft .topHeading P .red {
+  color: #f23f4a;
+}
+.all-sideWrap .infoLeft .topHeading P .green {
+  color: #62bf64;
+}
+section.secTopNav {
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 0 11px 0.1px rgba(0, 0, 0, 0.05);
+}
+section.secTopNav .leftLogo {
+  position: relative;
+}
+section.secTopNav .leftLogo span {
+  color: #8a8a8a;
+  display: inline-block;
+  margin-right: 20px;
+}
+section.secTopNav .leftLogo img {
+  width: 140px;
+}
+section.secTopNav .rightSearch {
+  position: relative;
+  padding-right: 70px;
+}
+section.secTopNav .rightSearch .bell {
+  position: absolute;
+  right: 0px;
+  top: 3px;
+}
+section.secTopNav .rightSearch .bell span {
+  position: absolute;
+  background-color: #eb6258;
+  right: -2px;
+  top: -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+section.secTopNav .rightSearch .bell img {
+  width: 22px;
+}
+section.secTopNav .rightSearch .searchMain {
+  position: relative;
+  text-align: right;
+  margin-top: 5px;
+}
+section.secTopNav .rightSearch .searchMain span {
+  color: #8a8a8a;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+section.secTopNav .rightSearch .searchMain input {
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  display: inline-block;
+  border: 0px;
+  box-shadow: 0 0 0;
+  padding-left: 40px;
+}
+section.firstSection {
+  position: relative;
+  padding: 40px 20px;
+}
+section.firstSection .rightPercentMain {
+  position: relative;
+}
+section.firstSection .rightPercentMain label {
+  color: #000000;
+}
+section.firstSection .rightPercentMain .targetMain {
+  position: relative;
+  padding-left: 200px;
+  min-height: 75px;
+}
+section.firstSection .rightPercentMain .targetMain .leftPercent {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+section.firstSection .rightPercentMain .targetMain .leftPercent h2 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: #62bf64;
+  font-weight: bold;
+}
+section.firstSection .rightPercentMain .targetMain .leftPercent p {
+  color: #62bf64;
+  text-transform: uppercase;
+}
+section.firstSection .rightPercentMain .targetMain .percentRight {
+  font-weight: bold;
+  padding-top: 15px;
+}
+section.firstSection .rightPercentMain .targetMain .percentRight p {
+  margin-bottom: 0px;
+}
+section.firstSection .rightPercentMain .targetMain .percentRight p a {
+  display: inline-block;
+  margin-left: 10px;
+  color: green;
+  text-decoration: underline !important;
+}
+section.firstSection .rightPercentMain .targetMain .percentRight .red {
+  color: #f23f4a;
+}
+section.firstSection .rightPercentMain .targetMain .percentRight .green {
+  color: #62bf64;
+}
+section.firstSection .baseYear {
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 25px;
+  display: none;
+  padding-left: 230px;
+  margin-top: 30px;
+  min-height: 200px;
+  margin-bottom: 30px;
+}
+section.firstSection .baseYear .baseLeft {
+  position: absolute;
+  left: 25px;
+  width: 180px;
+  top: 25px;
+  text-align: center;
+}
+section.firstSection .baseYear .baseLeft .form-control {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  color: #8a8a8a;
+  padding: 10px 10px;
+  border: 0px;
+  box-shadow: 0 0 0;
+  text-align: center;
+}
+section.firstSection .baseYear .baseLeft img {
+  width: 40px;
+  margin-top: 30px;
+}
+section.firstSection .baseYear .rightBase {
+  position: relative;
+  padding-left: 20px;
+}
+section.firstSection .baseYear .rightBase h4 {
+  color: #323c47;
+  margin-bottom: 20px;
+}
+section.firstSection .baseYear .leftOneBtn {
+  padding: 0px 20px;
+}
+section.firstSection .baseYear .leftOneBtn span {
+  position: absolute;
+  right: -6px;
+  top: 45px;
+  font-size: 20px;
+  color: #323c47;
+}
+section.firstSection .baseYear .leftOneBtn .form-control {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  color: #8a8a8a;
+  padding: 10px 10px;
+  border: 0px;
+  box-shadow: 0 0 0;
+  text-align: center;
+}
+section.firstSection .baseYear .leftOneBtn p {
+  color: #cccccc;
+  font-size: 11px;
+}
+section.firstSection .mainLeftTabs {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 25px;
+}
+section.firstSection .mainLeftTabs .pillsMain {
+  position: relative;
+}
+section.firstSection .mainLeftTabs .pillsMain .pillsWrap {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  padding-left: 0px;
+  border-bottom: 1px solid #fafafa;
+}
+section.firstSection .mainLeftTabs .pillsMain .pillsWrap li {
+  padding-bottom: 8px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  bottom: -1px;
+  transition: 0.4s;
+  border-bottom: 1px solid transparent;
+}
+section.firstSection .mainLeftTabs .pillsMain .pillsWrap li.active {
+  border-bottom: 1px solid #62bf64;
+}
+section.firstSection .mainLeftTabs .pillsMain .pillsWrap li.active a {
+  color: #377d6f !important;
+}
+section.firstSection .mainLeftTabs .pillsMain .pillsWrap li a {
+  color: #cccccc;
+  transition: 0.4s;
+  font-weight: bold;
+  background-color: transparent;
+}
+section.firstSection .mainLeftTabs .tabMain {
+  position: relative;
+}
+section.firstSection .mainLeftTabs .tabMain .progressMainWrap {
+  position: relative;
+  margin-top: 40px;
+}
+section.firstSection .mainLeftTabs .tabMain .progressMainWrap .labelProgress {
+  position: relative;
+  padding-left: 200px;
+  padding-right: 80px;
+  min-height: 27px;
+  padding-top: 3px;
+  margin-top: 20px;
+}
+section.firstSection .mainLeftTabs .tabMain .progressMainWrap .labelProgress .progreMain {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #f6f6f6;
+}
+section.firstSection .mainLeftTabs .tabMain .progressMainWrap .labelProgress .progreMain p {
+  position: absolute;
+  left: 0px;
+  background-color: #62bf64;
+  top: 0px;
+  height: 100%;
+  width: 20%;
+  z-index: 1;
+  border-radius: 25px;
+}
+section.firstSection .mainLeftTabs .tabMain .progressMainWrap .labelProgress > span {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: #323c47;
+  font-weight: bold;
+  font-size: 16px;
+}
+section.firstSection .mainLeftTabs .tabMain .progressMainWrap .labelProgress label {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+section.firstSection .mainLeftTabs .tabMain .progressMainWrap .labelProgress .progressMain {
+  position: relative;
+  background-color: #f6f6f6;
+  height: 15px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+section.firstSection .mainLeftTabs .tabMain .progressMainWrap .labelProgress .progressMain span {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  top: 0px;
+  background-color: #62bf64;
+}
+section.firstSection .mainLeftTabs .tabMain .thirdMenu {
+  position: relative;
+}
+section.firstSection .mainLeftTabs .tabMain .thirdMenu .progressChange {
+  margin-top: 20px;
+}
+section.firstSection .mainLeftTabs .tabMain .thirdMenu .progressChange label {
+  margin-bottom: 0px;
+}
+section.firstSection .mainLeftTabs .tabMain .thirdMenu .progressChange .labelProgress {
+  position: relative;
+}
+section.firstSection .mainLeftTabs .tabMain .thirdMenu .progressChange .labelProgress .progreMain {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #f6f6f6;
+}
+section.firstSection .mainLeftTabs .tabMain .thirdMenu .progressChange .labelProgress .progreMain p {
+  position: absolute;
+  left: 0px;
+  background-color: #62bf64;
+  top: 0px;
+  height: 100%;
+  width: 20%;
+  z-index: 1;
+  border-radius: 25px;
+}
+section.firstSection .mainLeftTabs .tabMain .thirdMenu .progressChange .labelProgress label {
+  font-weight: lighter;
+  color: #cccccc;
+  padding-left: 20px;
+}
+section.firstSection .mainLeftTabs .tabMain .tabContent {
+  position: relative;
+  margin-top: 30px;
+}
+section.firstSection .mainLeftTabs .tabMain .tabContent .btn {
+  border-radius: 25px;
+  border: 0px;
+  background-color: #62bf64;
+  box-shadow: 0 0 0 0;
+  color: #fff;
+  margin-top: 20px;
+  padding: 8px 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+section.firstSection .mainLeftTabs .tabMain .tabContent p {
+  color: #cccccc;
+  font-size: 12px;
+}
+section.firstSection .mainLeftTabs .tabMain .tabContent p span {
+  text-decoration: underline;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain {
+  position: relative;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain {
+  position: relative;
+  min-height: 135px;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg {
+  position: relative;
+  height: 14px;
+  background-color: #fafafa;
+  padding-left: 0px;
+  border-radius: 25px;
+  clear: both;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li {
+  display: block;
+  height: 100%;
+  background-color: #333;
+  float: left;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li span {
+  position: absolute;
+  right: -21px;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  display: grid;
+  border-radius: 50%;
+  align-items: center;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li span:hover p {
+  font-size: 10px !important;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li span.top {
+  bottom: 120%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li span.bottom {
+  top: 120%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li span p {
+  position: relative;
+  font-size: 7px;
+  z-index: 2;
+  margin: 0px;
+  transition: 0.4s ease;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li span img {
+  height: 48px;
+  width: 42px;
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  z-index: 1;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color1 {
+  background-color: #404040;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color1:hover span {
+  background-color: #404040;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color1 span:hover {
+  background-color: #404040;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color2 {
+  background-color: #808080;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color2:hover span {
+  background-color: #808080;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color2 span:hover {
+  background-color: #808080;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color3 {
+  background-color: #bfbfbf;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color3:hover span {
+  background-color: #bfbfbf;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color3 span:hover {
+  background-color: #bfbfbf;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color4 {
+  background-color: #d9444e;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color4:hover span {
+  background-color: #d9444e;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color4 span:hover {
+  background-color: #d9444e;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color5 {
+  background-color: #ee7b47;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color5:hover span {
+  background-color: #ee7b47;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color5 span:hover {
+  background-color: #ee7b47;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color6 {
+  background-color: #fcdb87;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color6:hover span {
+  background-color: #fcdb87;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color6 span:hover {
+  background-color: #fcdb87;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color7 {
+  background-color: #9dd7a5;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color7:hover span {
+  background-color: #9dd7a5;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color7 span:hover {
+  background-color: #9dd7a5;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color8 {
+  background-color: #3c8fbb;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color8:hover span {
+  background-color: #3c8fbb;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color8 span:hover {
+  background-color: #3c8fbb;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color9 {
+  background-color: #4e6eb1;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color9:hover span {
+  background-color: #4e6eb1;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .colorProgressMain .colorProg > li.color9 span:hover {
+  background-color: #4e6eb1;
+  border-radius: 50%;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .secondContent {
+  position: relative;
+  margin-top: 30px;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .secondContent .pContent {
+  position: relative;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .secondContent .pContent p {
+  position: relative;
+  font-size: 12px;
+}
+section.firstSection .mainLeftTabs .tabMain .secondMain .secondContent .pContent p span {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  section.firstSection .rightPercentMain {
+    margin-bottom: 30px;
+  }
+  section.firstSection .mainLeftTabs {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  section.firstSection .rightPercentMain {
+    margin-bottom: 30px;
+  }
+  section.firstSection .rightPercentMain .targetMain {
+    padding-left: 0px;
+  }
+  section.firstSection .rightPercentMain .targetMain .leftPercent {
+    position: relative;
+  }
+  section.firstSection .baseYear {
+    padding-left: 25px;
+  }
+  section.firstSection .baseYear .leftOneBtn span {
+    right: 49%;
+    bottom: -33px;
+    top: auto;
+  }
+  section.firstSection .baseYear .leftOneBtn {
+    padding: 0px 20px;
+    margin-bottom: 44px;
+  }
+  section.firstSection .baseYear .baseLeft {
+    position: relative;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+  }
+  section.firstSection .rightPercentMain .targetMain .leftPercent h2 {
+    font-size: 19px;
+  }
+  section.firstSection .rightPercentMain .targetMain .leftPercent p {
+    font-size: 11px;
+  }
+  .all-sideWrap .btnMain .btn {
+    padding: 8px 0px;
+    width: 100%;
+    font-size: 10px;
+  }
+  section.firstSection .mainLeftTabs .pillsMain .pillsWrap {
+    grid-template-columns: auto auto;
+  }
+  section.firstSection .mainLeftTabs .tabMain .progressMainWrap .labelProgress {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  section.firstSection .mainLeftTabs .tabMain .progressMainWrap .labelProgress label {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  section.firstSection .mainLeftTabs .tabMain .thirdMenu .progressChange .labelProgress label {
+    padding-left: 0px;
+  }
+  section.firstSection .mainLeftTabs {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .all-sideWrap .lastPera {
+    margin-bottom: 30px;
+  }
+  .all-sideWrap .borderRight {
+    border-right: 0px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+    margin-bottom: 26px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

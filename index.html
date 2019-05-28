@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta name="og:card" content="" />
+	<meta name="og:description" content="" />
+	<meta name="og:title" content="" />
+	<meta name="og:image" content="" />
+
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<link rel="stylesheet" href="assets/css/rangeslider.css">
+
+	<link rel="stylesheet" href="assets/css/nouislider.css">
+	<link rel="stylesheet" href="assets/css/styleS.css">
+
+	<script src="assets/js/material.min.js"></script>
+	<script src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/three.js"></script>
+	<script src="assets/js/Detector.js"></script>
+	<script src="assets/js/OrbitControls.js"></script>
+	<script src="assets/js/tween.js"></script>
+	<script src="assets/js/nouislider.js"></script>
+</head>
+
+<body>
+
+
+	<section class="secTopNav">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-12">
+					<div class="leftLogo">
+						<span class="fa fa-bars"></span>
+						<img src="assets/img/logo.png" alt="">
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="rightSearch">
+						<div class="searchMain">
+							<span class="fa fa-search"></span>
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<div class="bell">
+							<span></span>
+							<img src="assets/img/bell.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="firstSection">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-12"></div>
+				<div class="col-md-6 col-sm-12">
+					<div class="rightPercentMain">
+						<label for="">Target</label>
+						<div class="targetMain">
+							<div class="leftPercent">
+								<h2>5.34%</h2>
+								<p>
+									Progress made
+								</p>
+							</div>
+							<div class="percentRight">
+								<p>
+									<span class="red">187,2000 till 2030 /</span>
+									<span class="green">Achieved 2030 target</span>
+								</p>
+								<p>
+									2030 Target: 4,000
+									<a href="#" class="showTabsRight">edit</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="baseYear">
+						<div class="baseLeft">
+							<input type="text" class="form-control" placeholder="Base Year">
+							<input type="text" class="form-control" placeholder="Goal Year">
+							<a href="#">
+								<img src="assets/img/plus.png" alt="">
+							</a>
+						</div>
+						<div class="rightBase">
+							<h4>5,695 MT CO2e</h4>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								<div class="leftOneBtn">
+									<span>Or</span>
+									<input type="text" class="form-control" placeholder="%">
+									<p>
+										Insert percentage reduction of emissions to
+										be achieved by targeted goal year. For
+										example, 80% reduction to base year goal
+										of 234k would be 46,800 MTCO2e by 2050
+									</p>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="leftOneBtn">
+									<input type="text" class="form-control" placeholder="MT CO2e">
+									<p>
+										Insert percentage reduction of emissions to
+										be achieved by targeted goal year. For
+										example, 80% reduction to base year goal
+										of 234k would be 46,800 MTCO2e by 2050
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 col-sm-12">
+					<div class="mainLeftTabs">
+						<div class="pillsMain">
+							<ul class="nav-pills pillsWrap">
+								<li class="active"><a data-toggle="pill" href="#home">Grid Loss</a></li>
+								<li><a data-toggle="pill" href="#menu1">Energy mix</a></li>
+								<li><a data-toggle="pill" href="#menu2">Electrification</a></li>
+								<li><a data-toggle="pill" href="#menu2">Efficiency</a></li>
+							</ul>
+						</div>
+
+						<div class="tabMain">
+							<div class="tab-content">
+								<div id="home" class="tab-pane fade in active">
+									<div class="progressMainWrap">
+										<div class="labelProgress">
+											<label for="">Conversion and T&D</label>
+											<div class="progreMain">
+												<input type="range" min="1" max="100" value="50" class="slider"
+													id="myRange">
+												<p id="prog">
+												</p>
+											</div>
+											<span id="demo"></span>
+										</div>
+									</div>
+									<div class="tabContent">
+										<p>
+											Lowering the level of losses as fuels gets converted to electricity at the
+											utility level, it is important to increase the <span>level of end-use</span>
+											<span>electrification</span>. and increasing the <span>share of clean energy
+												in utility</span>.
+										</p>
+										<button class="btn">Reset</button>
+									</div>
+								</div>
+								<div id="menu1" class="tab-pane fade">
+									<div class="secondMain">
+										<div class="row">
+											<div class="col-md-1 col-sm-1"></div>
+											<div class="col-md-10 col-sm-10">
+												<div class="colorProgressMain">
+													<div id="canvas" style="display: none;"></div>
+
+													<div class="filter_container cont" style="display: none;">
+														<span class="value" id="slider1-value"></span>
+														<input class="slider mdl-slider mdl-js-slider" id="1"
+															type="range" min="1960" max="2010" value="2010"
+															tabindex="0">
+													</div>
+
+													<div class="range-slider-wrapper">
+														<div id="range-slider"></div>
+													</div>
+
+
+
+												</div>
+											</div>
+											<div class="col-md-1 col-sm-1"></div>
+										</div>
+										<div class="secondContent">
+											<div class="row">
+												<div class="col-md-1 col-sm-1"></div>
+												<div class="col-md-5 col-sm-5">
+													<div class="pContent">
+														<p>
+															Coal
+															<span>8%</span>
+														</p>
+														<p>
+															Petroleum
+															<span>8%</span>
+														</p>
+														<p>
+															Natural gas
+															<span>15%</span>
+														</p>
+													</div>
+												</div>
+												<div class="col-md-5 col-sm-5">
+													<div class="pContent">
+														<p>
+															Nuclear
+															<span>17%</span>
+														</p>
+														<p>
+															Geothermal
+															<span>15%</span>
+														</p>
+														<p>
+															Solar
+															<span>10%</span>
+														</p>
+														<p>
+															Biomass
+															<span>13%</span>
+														</p>
+														<p>
+															Wind
+															<span>11%</span>
+														</p>
+														<p>
+															Hydro
+															<span>1%</span>
+														</p>
+													</div>
+												</div>
+												<div class="col-md-1 col-sm-1"></div>
+											</div>
+										</div>
+										<div class="tabContent">
+											<p>
+												Besides increasing the level of electrification of end-use equipment and
+												assets, it is important to, as well as lower the <span>grid
+													losses</span>.
+											</p>
+											<button class="btn">Reset</button>
+										</div>
+									</div>
+								</div>
+								<div id="menu2" class="tab-pane fade">
+									<div class="thirdMenu">
+										<div class="progressMainWrap">
+											<div class="labelProgress">
+												<label for="">Residential</label>
+												<div class="progreMain">
+													<input type="range" min="1" max="100" value="50" class="slider"
+														id="myRange1">
+													<p id="prog1">
+													</p>
+												</div>
+												<span id="demo1"></span>
+											</div>
+										</div>
+
+
+										<div class="progressChange">
+											<div class="headingProg">
+												<label>Organizational</label>
+											</div>
+											<div class="progressMainWrap">
+												<div class="labelProgress">
+													<label for="">Commercial</label>
+													<div class="progreMain">
+														<input type="range" min="1" max="100" value="50" class="slider"
+															id="myRange2">
+														<p id="prog2">
+														</p>
+													</div>
+													<span id="demo2"></span>
+												</div>
+											</div>
+											<div class="progressMainWrap">
+												<div class="labelProgress">
+													<label for="">Industrial</label>
+													<div class="progreMain">
+														<input type="range" min="1" max="100" value="50" class="slider"
+															id="myRange3">
+														<p id="prog3">
+														</p>
+													</div>
+													<span id="demo3"></span>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="progressMainWrap">
+											<div class="labelProgress">
+												<label for="">Transportation</label>
+													<div class="progreMain">
+														<input type="range" min="1" max="100" value="50" class="slider"
+															id="myRange4">
+														<p id="prog4">
+														</p>
+													</div>
+													<span id="demo4"></span>
+											</div>
+										</div>
+
+										<div class="tabContent">
+											<p>
+												Besides increasing the level of electrification of end-use equipment and
+												assets, it is important to, as well as lower the <span>grid
+													losses</span>.
+											</p>
+											<button class="btn">Reset</button>
+										</div>
+									</div>
+								</div>
+								<div id="menu3" class="tab-pane fade">
+									<div class="thirdMenu">
+										<div class="progressMainWrap">
+											<div class="labelProgress">
+												<label for="">Residential</label>
+												<div class="progressMain">
+													<span style="width: 34%;"></span>
+												</div>
+												<span>34%</span>
+											</div>
+										</div>
+
+
+										<div class="progressChange">
+											<div class="headingProg">
+												<label>Organization</label>
+											</div>
+											<div class="progressMainWrap">
+												<div class="labelProgress">
+													<label for="">Residential</label>
+													<div class="progressMain">
+														<span style="width: 24%;"></span>
+													</div>
+													<span>24%</span>
+												</div>
+											</div>
+											<div class="progressMainWrap">
+												<div class="labelProgress">
+													<label for="">Industrial</label>
+													<div class="progressMain">
+														<span style="width: 13%;"></span>
+													</div>
+													<span>13%</span>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="progressMainWrap">
+											<div class="labelProgress">
+												<label for="">Transportation</label>
+												<div class="progressMain">
+													<span style="width: 1%;"></span>
+												</div>
+												<span>1%</span>
+											</div>
+										</div>
+
+										<div class="tabContent">
+											<p>
+												Besides increasing the level of electrification of end-use equipment and
+												assets, it is important to, as well as lower the <span>grid
+													losses</span>.
+											</p>
+											<button class="btn">Reset</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="all-sideWrap">
+						<div class="row">
+							<div class="col-md-5 col-sm-5 borderRight">
+								<div class="infoLeft">
+									<div class="showUp">
+
+
+									</div>
+									<div class="topHeading">
+										<h4>
+											Increase utility clean
+											energy by
+										</h4>
+										<p>
+											Coal
+											<span class="smallNumber">8%</span>
+											<span class="red percent">
+												<i class="fa fa-caret-down"></i>
+												8%
+											</span>
+										</p>
+										<p>
+											Petroleum
+											<span class="smallNumber">8%</span>
+											<span class="green percent">
+												<i class="fa fa-caret-up"></i>
+												2%
+											</span>
+										</p>
+										<p>
+											Natural gas
+											<span class="smallNumber">7%</span>
+										</p>
+										<p>
+											Nuclear
+											<span class="smallNumber">17%</span>
+										</p>
+										<p>
+											Geothermal
+											<span class="smallNumber">15%</span>
+										</p>
+										<p>
+											Solar
+											<span class="smallNumber">10%</span>
+										</p>
+										<p>
+											Biomass
+											<span class="smallNumber">15%</span>
+										</p>
+										<p>
+											Wind
+											<span class="smallNumber">11%</span>
+										</p>
+										<p>
+											Hydro
+											<span class="smallNumber">1%</span>
+										</p>
+									</div>
+								</div>
+								<div class="lastPera">
+									Increase grid efficiency by
+									<span>45%</span>
+								</div>
+							</div>
+							<div class="col-md-7 col-sm-7">
+								<div class="tableMain">
+									<table class="table">
+										<thead>
+											<tr>
+												<th></th>
+												<th>
+													Increase end-use
+													efficiency by
+												</th>
+												<th>
+													Electrify
+													proportion by
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Residential</td>
+												<td>0%</td>
+												<td>0%</td>
+											</tr>
+											<tr>
+												<td>Commercial</td>
+												<td>0%</td>
+												<td>0%</td>
+											</tr>
+											<tr>
+												<td>Industrial</td>
+												<td>0%</td>
+												<td>0%</td>
+											</tr>
+											<tr>
+												<td>Transportation</td>
+												<td>0%</td>
+												<td>0%</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12">
+								<div class="btnMain">
+									<button class="btn">
+										Save targets and implement roadmap
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer></footer>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script>
+
+
+		var slider = document.getElementById("myRange");
+		var output = document.getElementById("demo");
+		var prog = document.getElementById("prog");
+		var widthh = '';
+		output.innerHTML = slider.value + "%";
+		widthh = slider.value;
+		prog.style.width = widthh + "%";
+
+		slider.oninput = function () {
+			output.innerHTML = this.value + "%";
+			widthh = this.value;
+			prog.style.width = widthh + "%";
+		}
+
+
+		var slider1 = document.getElementById("myRange1");
+		var output1 = document.getElementById("demo1");
+		var prog1 = document.getElementById("prog1");
+		var widthh1 = '';
+		output1.innerHTML = slider1.value + "%";
+		widthh1 = slider1.value;
+		prog1.style.width = widthh1 + "%";
+
+		slider1.oninput = function () {
+			output1.innerHTML = this.value + "%";
+			widthh1 = this.value;
+			prog1.style.width = widthh1 + "%";
+		}
+
+
+
+
+		var slider2 = document.getElementById("myRange2");
+		var output2 = document.getElementById("demo2");
+		var prog2 = document.getElementById("prog2");
+		var widthh2 = '';
+		output2.innerHTML = slider2.value + "%";
+		widthh2 = slider2.value;
+		prog2.style.width = widthh2 + "%";
+
+		slider2.oninput = function () {
+			output2.innerHTML = this.value + "%";
+			widthh2 = this.value;
+			prog2.style.width = widthh2 + "%";
+		}
+
+
+		var slider3 = document.getElementById("myRange3");
+		var output3 = document.getElementById("demo3");
+		var prog3 = document.getElementById("prog3");
+		var widthh3 = '';
+		output3.innerHTML = slider3.value + "%";
+		widthh3 = slider3.value;
+		prog3.style.width = widthh3 + "%";
+
+		slider3.oninput = function () {
+			output3.innerHTML = this.value + "%";
+			widthh3 = this.value;
+			prog3.style.width = widthh3 + "%";
+		}
+
+
+		var slider4 = document.getElementById("myRange4");
+		var output4 = document.getElementById("demo4");
+		var prog4 = document.getElementById("prog4");
+		var widthh4 = '';
+		output4.innerHTML = slider4.value + "%";
+		widthh4 = slider4.value;
+		prog4.style.width = widthh4 + "%";
+
+		slider4.oninput = function () {
+			output4.innerHTML = this.value + "%";
+			widthh4 = this.value;
+			prog4.style.width = widthh4 + "%";
+		}
+
+
+
+
+	</script>
+</body>
+
+</html>
