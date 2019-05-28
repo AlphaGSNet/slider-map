@@ -175,15 +175,6 @@ $.getJSON('https://dl.dropboxusercontent.com/s/3aqbpvn6kar1a87/data.json', funct
 		}
 	}
 
-	//if we need clean array
-
-	// for (var i = 0; i<dataByYear.length; i++) {
-	//     if (dataByYear[i]) {
-	//         filteredData.push(dataByYear[i]);
-	//     }
-	// }
-	//dataByYear.clean(undefined);
-
 	var input = document.getElementById("1");
 	input.setAttribute("min", years[0]);
 	input.setAttribute("max", years[years.length-1]);
@@ -476,19 +467,11 @@ function init() {
 		new THREE.MeshPhongMaterial( { color: 0x9FD6E1, specular: 0x101010 } )
 	);
 	plane.rotation.x = -Math.PI/2;
-	//scene.add( plane );
-
-	// var axesHelper = new THREE.AxesHelper( 500 );
-	// scene.add( axesHelper );
-
-	// plane.receiveShadow = true;
 
 	var spread = 10.5;
 	graphSystem = new THREE.Group();
 	graphSystem.position.z = -100;
 	graphSystem.rotation.y = Math.PI;
-	//graphSystem.geometry.translate( 0, 0, -50 );
-	//graphSystem.applyMatrix( new THREE.Matrix4().makeTranslation( 0,0,50 ) );
 	scene.add(graphSystem);
 
 	function createGraph() {
