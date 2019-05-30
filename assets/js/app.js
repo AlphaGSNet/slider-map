@@ -500,13 +500,6 @@ function init() {
 
 	container.appendChild( renderer.domElement );
 
-	// stats - uncomment this to see the FPS
-
-	//stats = new Stats();
-	//container.appendChild( stats.dom );
-
-	//
-
 	window.addEventListener( 'resize', onWindowResize, false );
 	window.addEventListener( 'mousemove', onDocumentMouseMove, false );
 }
@@ -544,8 +537,6 @@ function onWindowResize() {
 function animate() {
 	requestAnimationFrame( animate );
 	camera.lookAt (cameraTarget);
-
-	// graphSystem.rotation.y += 0.1;
 
 	render();
 }
@@ -640,23 +631,6 @@ function onDocumentMouseMove(event) {
 			var verb = 'used';
 			var energyType = INTERSECTED.energyType;
 		}
-
-		// console.log('tower index: ',towerName, 'tower total value: ',totalSum); // Helps better understand what tower type is hovered and its sum
-
-		// $('#popup').html('<b>'+INTERSECTED.state+'</b> '+verb+' <b>'+INTERSECTED.value+'</b> Quads of <b>'+energyType+'</b> energy<b>'+sectorType+', out of <b>'+totalSum+'</b> Quads total, in <b>'+INTERSECTED.year+'</b> year<br>Some additional text here<br>Link: <a href="">You cant click this link :D</a>'); //show some data in popup window on intersection
-		// $('#popup').html('<b>'+stateName+'</b> '+verb+' <b>'+INTERSECTED.value+'</b> Quads of <b>'+energyType+'</b> energy<b>'+sectorType+', out of <b>'+totalSum+'</b> Quads total, in <b>'+INTERSECTED.year+'</b> year<br>Some additional text here<br>Link: <a href="">You cant click this link :D</a>'); //show some data in popup window on intersection
-		$('#popup').html(
-			'<b>Kansas City</b> ' + verb +
-			' <b>' + INTERSECTED.value +
-			'</b> mm BTU of <b>' + energyType +
-			'</b> energy<b>' + sectorType +
-			', out of <b>' + totalSum +
-			'</b> mm BTUs total, in <b>' + INTERSECTED.year +
-			'</b> year<br>Some additional text here<br>Link: <a href="#" onclick="onDocumentClickPopUp(' + INTERSECTED.id + ');">You cant click this link :D</a>'
-		);
-		$('#popup').fadeIn(300);
-		$('#popup').css('left','' + popupX + 'px');
-		$('#popup').css('top','' + popupY + 'px');
 	} else {
 		if ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );
 
