@@ -944,31 +944,6 @@ $('.filter-item3').click(function () {
 	}
 });
 
-// simplemaps_usmap.hooks.click_state=function(id){
-//     stateId = id;
-//     stateName = simplemaps_usmap_mapdata.state_specific[id].name;
-//     changeData(currentYear);
-//     console.log('Changed state: ',id,'Current year: ',currentYear);
-// }
-
-/*
- * 
- * Function to handle the Click Event for cubes
- * 
- */
-// function onDocumentClickPopUp(event) {
-// 	var raycaster = new THREE.Raycaster();
-// 	raycaster.setFromCamera(mouse, camera);
-// 	var intersects = raycaster.intersectObjects(graph);
-// 	if (intersects.length > 0) {
-// 		cubeName = intersects[0].object.name;
-// 		treeMapDate = formTreeMapDataForCube(cubeName);
-// 		// Display Modal
-// 		var modal = document.getElementById('treeMapPopUp');
-// 		$("#treeMapPopUp .modelContentBody").html(treeMapDate);
-// 		modal.style.display = "block";
-// 	}
-// }
 function onDocumentClickPopUp(id) {
 	var raycaster = new THREE.Raycaster();
 
