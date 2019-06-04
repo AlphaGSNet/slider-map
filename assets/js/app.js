@@ -882,68 +882,6 @@ $( '#popup' ).mouseleave(function() {
   $('#popup').addClass('close');
 });
 
-$('.filter-item').click(function() {
-	var clickedId = $(this).attr('id');
-
-	if ( $(this).hasClass('on') ) {
-		$(this).removeClass('on');
-		$(this).addClass('off');
-
-		for (var i = graph.length - 1; i >= 0; i--) {
-			if( graph[i].energyType == clickedId ) {
-				graph[i].visible = false;
-			}
-		}
-	} else {
-		$(this).removeClass('off');
-		$(this).addClass('on');
-
-		for (var i = graph.length - 1; i >= 0; i--) {
-			if (graph[i].energyType == clickedId && ((graph[i].name.indexOf("-") >= 0 && $('#filter-item2-' + graph[i].name.slice(-1)).hasClass('on'))) ) {
-				graph[i].visible = true;
-			}
-		}
-	}
-
-	showTotalEnergySum();
-});
-
-$('.filter-item2').click(function() {
-	var clickedId = $(this).attr('id').slice(-1);
-
-	if ( $(this).hasClass('on') ) {
-		$(this).removeClass('on');
-		$(this).addClass('off');
-
-		for (var i = graph.length - 1; i >= 0; i--) {
-			if ((graph[i].name.slice(-3) == '-1' + clickedId || graph[i].name.slice(-3) == '-2' + clickedId || graph[i].name.slice(-3) == '-3' + clickedId)) {
-				graph[i].visible = false;
-			}
-		}
-	} else {
-		$(this).removeClass('off');
-		$(this).addClass('on');
-
-		for (var i = graph.length - 1; i >= 0; i--) {
-			if ((graph[i].name.slice(-3) == '-1' + clickedId || graph[i].name.slice(-3) == '-2' + clickedId || graph[i].name.slice(-3) == '-3' + clickedId) && $('#' + graph[i].energyType).hasClass('on') ) {
-				graph[i].visible = true;
-			}
-		}
-	}
-
-	showTotalEnergySum();
-});
-
-$('.filter-item3').click(function () {
-	if ($(this).hasClass('on')) {
-		$(this).removeClass('on').addClass('off');
-		$('.range-slider-wrapper').addClass('hidden');
-	} else {
-		$(this).removeClass('off').addClass('on');
-		$('.range-slider-wrapper').removeClass('hidden');
-	}
-});
-
 function onDocumentClickPopUp(id) {
 	var raycaster = new THREE.Raycaster();
 
