@@ -1080,22 +1080,3 @@ function onDocumentClickPopUp(id) {
 	var modal = document.getElementById('treeMapPopUp');
 	modal.style.display = "block";
 }
-
-function formTreeMapDataForCube(cubeName) {
-	cubeJsonFile = 'data/' + cubeName + '.json';
-	$("#grayMapBody").html('');
-	createMapTreeGraphForSpecificCube(cubeJsonFile);
-}
-
-/*
-* 
-* Close PopUp
-* 
-*/
-function closePopUp() {
-	$("#grayMapBody").html('');
-	var modal = document.getElementById('treeMapPopUp');
-	modal.style.display = "none";
-}
-
-// onDocumentClickPopUp();
