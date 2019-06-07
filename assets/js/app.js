@@ -1076,7 +1076,4 @@ function onDocumentClickPopUp(id) {
 
 			animate();
 	});
-
-	var modal = document.getElementById('treeMapPopUp');
-	modal.style.display = "block";
 }
