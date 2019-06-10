@@ -941,11 +941,6 @@ function onDocumentClickPopUp(id) {
 		renderer.setSize(760, 460);
 	}
 
-	var carpet = THREE.ImageUtils.loadTexture('img/carpet.jpg', null, function () {
-		canvas.transition().duration(2000).style("opacity", 1);
-		d3.select("#loading").transition().duration(2000).style("opacity", 0).remove();
-	});
-
 	id = 1;
 
 	d3.json('data/' + id + '.json', function (err, data) {
