@@ -875,13 +875,6 @@ function updateGraphVisually() {
 	object8.position.y = object8.visValue / 2 + object00.visValue + object01.visValue + object02.visValue + object2.visValue + object3.visValue + object4.visValue + object5.visValue + object6.visValue + object7.visValue;
 }
 
-$('#popup').hover(function() {
-  $('#popup').removeClass('close');
-});
-$( '#popup' ).mouseleave(function() {
-  $('#popup').addClass('close');
-});
-
 function onDocumentClickPopUp(id) {
 	var raycaster = new THREE.Raycaster();
 
