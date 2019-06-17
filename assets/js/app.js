@@ -397,7 +397,6 @@ function updateRangeSlider(values, handle) {
 	for (var i = 0; i < updatedDataLen; i++) {
 		fillGraph(updatedData[i].Type, updatedData[i], i);
 	}
-	updateGraphVisually();
 }
 
 /**
@@ -668,8 +667,6 @@ function changeData(year) {
 	for (var i = 0; i < filteredData.length; i++) {
 		fillGraph( filteredData[i].Type, filteredData[i], i );
 	}
-
-	updateGraphVisually();
 	// updateChart();
 	initRangeSlider();
 }
@@ -802,75 +799,4 @@ function fillGraph(name, dataSet, layerNumber) {
 	}
 
 	showTotalEnergySum();    
-}
-
-function updateGraphVisually() {
-	for (var i = 0; i < 3; i++) {
-		heightsGlobal[i] = [];
-
-		for (var j = 0; j < 3; j++) {
-			heightsGlobal[i][j] = 0;
-		}
-	}
-
-	for (var i = 0; i < layer.length; i++) {
-		if (layer[i].name == 'B') { sortedLayers[0] = layer[i] }
-		if (layer[i].name == 'C') { sortedLayers[1] = layer[i] }
-
-		if (layer[i].name == 'A4') { sortedLayers[2] = layer[i] }
-		if (layer[i].name == 'A2') { sortedLayers[3] = layer[i] }
-		if (layer[i].name == 'A5') { sortedLayers[4] = layer[i] }
-		if (layer[i].name == 'A1') { sortedLayers[5] = layer[i] }
-		if (layer[i].name == 'A3') { sortedLayers[6] = layer[i] }
-		if (layer[i].name == 'A6') { sortedLayers[7] = layer[i] }
-	}
-
-	for (var k = 0; k < sortedLayers.length; k++) {
-		for (var i = 0; i < 3; i++) {
-			for (var j = 0; j < 3; j++) {
-				var firstLetter = i + 1;
-				var secondLetter = j + 1;
-
-				var object = scene.getObjectByName('' + sortedLayers[k].name + '-' + firstLetter + '' + secondLetter + '');
-
-				if ( sortedLayers[k].name == 'B' ) {
-					object.position.y = object.visValue / 2;
-					heightsGlobal[i][j] += object.visValue;
-				} else {
-					object.position.y = object.visValue / 2 + heightsGlobal[i][j];
-					heightsGlobal[i][j] += object.visValue;
-				}
-			}
-		}
-	}
-
-	var object00 = scene.getObjectByName( 'B00' );
-	object00.position.y = object00.visValue / 2;
-
-	var object01 = scene.getObjectByName( 'B01' );
-	object01.position.y = object01.visValue / 2 + object00.visValue;
-
-	var object02 = scene.getObjectByName( 'B02' );
-	object02.position.y = object02.visValue / 2 + object00.visValue + object01.visValue;
-
-	var object2 = scene.getObjectByName( 'C' );
-	object2.position.y = object2.visValue / 2 + object00.visValue + object01.visValue + object02.visValue;
-
-	var object3 = scene.getObjectByName( 'A4' );
-	object3.position.y = object3.visValue / 2 + object00.visValue + object01.visValue + object02.visValue + object2.visValue;
-
-	var object4 = scene.getObjectByName( 'A2' );
-	object4.position.y = object4.visValue / 2 + object00.visValue + object01.visValue + object02.visValue + object2.visValue + object3.visValue;
-
-	var object5 = scene.getObjectByName( 'A5' );
-	object5.position.y = object5.visValue / 2 + object00.visValue + object01.visValue + object02.visValue + object2.visValue + object3.visValue + object4.visValue;
-
-	var object6 = scene.getObjectByName( 'A1' );
-	object6.position.y = object6.visValue / 2 + object00.visValue + object01.visValue + object02.visValue + object2.visValue + object3.visValue + object4.visValue + object5.visValue;
-
-	var object7 = scene.getObjectByName( 'A3' );
-	object7.position.y = object7.visValue / 2 + object00.visValue + object01.visValue + object02.visValue + object2.visValue + object3.visValue + object4.visValue + object5.visValue + object6.visValue;
-
-	var object8 = scene.getObjectByName( 'A6' );
-	object8.position.y = object8.visValue / 2 + object00.visValue + object01.visValue + object02.visValue + object2.visValue + object3.visValue + object4.visValue + object5.visValue + object6.visValue + object7.visValue;
 }
