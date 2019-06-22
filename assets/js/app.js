@@ -730,8 +730,6 @@ function fillGraph(name, dataSet, layerNumber) {
 		object2.scale.y = visValue2;
 	}
 
-	// heightsGlobal2[layerNumber] = visValue2; // not needed for now
-
 	var visValueMax = 0; // maxium of visValue
 
 	for (var i = 0; i < 3; i++) {
@@ -751,18 +749,6 @@ function fillGraph(name, dataSet, layerNumber) {
 			if (firstLetter == 3) {
 				object.sector = 'Transport';
 			}
-
-			// if (secondLetter == 1) {
-			//     object.energyType = 'Coal';
-			// }
-
-			// if (secondLetter == 2) {
-			//     object.energyType = 'Petroleum';
-			// }
-
-			// if (secondLetter == 3) {
-			//     object.energyType = 'Natural Gas';
-			// }		
 
 			var rawValue = dataSet['' + firstLetter + '' + secondLetter + ''];
 			object.value = Math.round(rawValue);
