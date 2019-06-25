@@ -409,19 +409,6 @@ $.fn.digits = function () {
 }
 
 /**
- * Show the total energy sum of cubes are visible currently
- */
-function showTotalEnergySum() {
-	var sum = 0;
-	for (var i = graph.length - 1; i >= 0; i--) {
-		if (graph[i].visible == true && graph[i].name.indexOf("-") >= 0) {
-			sum += graph[i].value;
-		}
-	}
-	$(".total_energy_sum").text(sum).digits();
-}
-
-/**
  * Switch filter item
  */
 function switchFilterItem() {
@@ -438,8 +425,6 @@ function switchFilterItem() {
 	for (var i = graph.length - 1; i >= 0; i--) {
 		graph[i].visible = checkBox.checked;
 	}
-
-	showTotalEnergySum();
 }
 
 function init() {
@@ -783,6 +768,4 @@ function fillGraph(name, dataSet, layerNumber) {
 			}
 		}
 	}
-
-	showTotalEnergySum();
 }
