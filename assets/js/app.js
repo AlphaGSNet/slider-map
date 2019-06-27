@@ -633,17 +633,5 @@ function onDocumentMouseMove(event) {
 function changeData(year) {
 	currentYear = year;
 
-	filteredData = [];
-
-	for (var i = 0; i < dataByYear[year].length; i++) {
-		if ( dataByYear[year][i].State == stateId ) {
-			filteredData.push( dataByYear[year][i] );
-		}
-	}
-
-	for (var i = 0; i < 8; i++) {
-		layer[i] = [];
-	}
-
 	initRangeSlider();
 }
