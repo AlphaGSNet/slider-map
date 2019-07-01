@@ -621,12 +621,6 @@ function onDocumentMouseMove(event) {
 		for (var i = 0; i < graph.length; i++) {
 			graph[i].material.opacity = 0.8;
 		}
-
-		if ($( '#popup' ).hasClass( 'close' )) {
-			$('#popup').fadeOut(400);            
-		} else {
-			$('#popup').fadeIn(100);       
-		}
 	}
 }
 
