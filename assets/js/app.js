@@ -523,14 +523,7 @@ function render() {
 var sliders = document.getElementsByClassName('slider');
 
 for (var i = 0; i < sliders.length; i++) {
-	sliders[i].addEventListener('input', onSliderInput, false);
 	sliders[i].addEventListener('change', onSliderChange, false);
-}
-
-function onSliderInput() {
-	var output = 'slider' + this.id + '-value';
-	document.getElementById(output).innerHTML = this.value;
-	changeData(this.value);
 }
 
 function onSliderChange() {
