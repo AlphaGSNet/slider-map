@@ -506,19 +506,6 @@ function addShadowedLight( x, y, z, color, intensity ) {
 	directionalLight.shadow.bias = -0.005;
 }
 
-function onWindowResize() {
-	camera.aspect = window.innerWidth / window.innerHeight;
-	camera.updateProjectionMatrix();
-
-	renderer.setSize( window.innerWidth, window.innerHeight );
-}
-
-function render() {
-	TWEEN.update();
-
-	renderer.render( scene, camera );
-}
-
 // SLIDERS
 var sliders = document.getElementsByClassName('slider');
 
