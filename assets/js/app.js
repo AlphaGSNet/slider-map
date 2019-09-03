@@ -422,67 +422,6 @@ function switchFilterItem() {
 	}
 }
 
-function init() {
-	container = document.getElementById( 'canvas' );
-
-	var aspect = window.innerWidth / window.innerHeight;
-	// camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 10000 );
-	var d = 60;
-	camera = new THREE.OrthographicCamera(- d * aspect, d * aspect, d, - d, 1, 1000);
-	// camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, 1, 2000 );
-							
-	camera.position.set( 60,60,60 );
-
-	cameraTarget = new THREE.Vector3( 0, 0, 0 );
-
-	scene = new THREE.Scene();
-	///scene.background = new THREE.Color( 0x72645b );
-	scene.fog = new THREE.Fog( 0xffffff, 100, 150 );
-
-	// Ground if needed
-
-	var plane = new THREE.Mesh(
-		new THREE.PlaneBufferGeometry( 40, 40 ),
-		new THREE.MeshPhongMaterial( { color: 0x9FD6E1, specular: 0x101010 } )
-	);
-	plane.rotation.x = -Math.PI/2;
-
-	var spread = 10.5;
-	graphSystem = new THREE.Group();
-	graphSystem.position.z = -100;
-	graphSystem.rotation.y = Math.PI;
-	scene.add(graphSystem);
-
-	// Lights shortcodes to add light
-
-	scene.add( new THREE.HemisphereLight( 0xffffff, 0xcccccc, 0.4 ) );
-
-	addShadowedLight( 1, 0, 1, 0xffffff, 0.6 );
-	addShadowedLight( -1, 0, 1, 0xffffff, 0.6 );
-
-	// renderer scene settings. Don't touch it
-
-	renderer = new THREE.WebGLRenderer( { antialias: true } );
-	renderer.setPixelRatio( window.devicePixelRatio );
-	renderer.setClearColor( 0xffffff );
-	renderer.setSize( window.innerWidth, window.innerHeight );
-
-	renderer.gammaInput = true;
-	renderer.gammaOutput = true;
-
-	renderer.shadowMap.enabled = true;
-	renderer.shadowMap.renderReverseSided = false;
-
-	// CONTROLS
-	cameraControls = new THREE.OrbitControls( camera, renderer.domElement );
-	cameraControls.addEventListener( 'change', render );
-
-	container.appendChild( renderer.domElement );
-
-	window.addEventListener( 'resize', onWindowResize, false );
-	window.addEventListener( 'mousemove', onDocumentMouseMove, false );
-}
-
 // SLIDERS
 var sliders = document.getElementsByClassName('slider');
 
