@@ -403,25 +403,6 @@ $.fn.digits = function () {
 	})
 }
 
-/**
- * Switch filter item
- */
-function switchFilterItem() {
-	var checkBox = document.getElementById("switch-filter-item");
-
-	$('.filter-item').each(function (index) {
-		if (checkBox.checked == true) {
-			$(this).removeClass('off').addClass('on');
-		} else {
-			$(this).removeClass('on').addClass('off');
-		}
-	});
-
-	for (var i = graph.length - 1; i >= 0; i--) {
-		graph[i].visible = checkBox.checked;
-	}
-}
-
 // SLIDERS
 var sliders = document.getElementsByClassName('slider');
 
