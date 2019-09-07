@@ -387,11 +387,6 @@ function updateRangeSlider(values, handle) {
 		updatedDataItem['Year'] = dataCubeChart[i].Year;
 		updatedData.push(updatedDataItem);
 	}
-
-	// update graph
-	for (var i = 0; i < 8; i++) {
-		layer[i] = [];
-	}
 }
 
 /**
