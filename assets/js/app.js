@@ -175,14 +175,8 @@ $.getJSON('https://dl.dropboxusercontent.com/s/3aqbpvn6kar1a87/data.json', funct
 		}
 	}
 
-	var input = document.getElementById("1");
-	input.setAttribute("min", years[0]);
-	input.setAttribute("max", years[years.length-1]);
-	input.setAttribute("value", years[years.length-1]);
-
 	document.getElementById("slider1-value").innerHTML = years[years.length - 1];
 	
-	init();
 	changeData(currentYear);
 
 	// init slider connect color
