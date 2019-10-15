@@ -1,39 +1,10 @@
-if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
-
-var container, stats;
 var data;
-
-var camera, cameraTarget, scene, renderer;
-
-var mouse = new THREE.Vector2(), INTERSECTED;
-
-var heigth1 = [];
-var heigth2 = [];
-var heigth3 = [];
-var heigth4 = [];
-var heigth5 = [];
-var heigth6 = [];
-var heigth7 = [];
-var heigth8 = [];
-
-var layer = [];
-var sortedLayers = [];
-var heightsGlobal = [];
-var heightsGlobal2 = [];
-
-var graph = [];
-var graphSystem;
-
 var years = [];
-
 var dataByYear = [];
-var filteredData = [];
 
 var stateId = 'NY';
 var stateName = 'New York';
 var currentYear = 2014;
-
-var frustumSize = 1000;
 
 //<-- variables and constants for range slider
 const V32 = 6713924.71096368, V33 = 9220164.67645724, V34 = 6696779.94470847, V35 = 0, W32 = 147694.905991326, W33 = 62164.7495848525, W34 = 63714.9196865604, W35 = 0, X35 = 23244349.8830916, Y35 = 3402810.70215527, Z35 = 1927823.98763521, VIS_VAL_MAX = 4.25;
